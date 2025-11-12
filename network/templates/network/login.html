@@ -1,0 +1,58 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<div class="auth-container">
+    <div class="auth-card" data-aos="zoom-in">
+        <div class="auth-header">
+            <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="14" fill="#E1624F"/>
+                <path d="M12 10L20 16L12 22V10Z" fill="white"/>
+            </svg>
+            <h2>Welcome Back</h2>
+            <p>Sign in to continue to Network</p>
+        </div>
+
+        {% if message %}
+        <div class="alert-message" data-aos="shake">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            </svg>
+            {{ message }}
+        </div>
+        {% endif %}
+
+        <form action="{% url 'login3' %}" method="post" class="auth-form">
+            {% csrf_token %}
+            <div class="form-group-modern">
+                <label for="username">Username</label>
+                <input 
+                    autofocus 
+                    class="form-input-modern" 
+                    type="text" 
+                    name="username" 
+                    id="username"
+                    placeholder="Enter your username">
+            </div>
+            <div class="form-group-modern">
+                <label for="password">Password</label>
+                <input 
+                    class="form-input-modern" 
+                    type="password" 
+                    name="password" 
+                    id="password"
+                    placeholder="Enter your password">
+            </div>
+            <button class="btn-primary-custom btn-full" type="submit">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                </svg>
+                Sign In
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Don't have an account? <a href="{% url 'register3' %}">Create one here</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

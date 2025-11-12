@@ -1,0 +1,328 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Alexander Thorne, M.D. - Board-Certified Cardiologist</title>
+    <link rel="icon" sizes="32x32" href="{% static 'booking/doctor.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'booking/styles.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Dr. Alexander <span>Thorne</span></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#appointment" class="btn-primary">Book Appointment</a>
+            <div class="mobile-menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Your Heart Health is Our Priority</h1>
+            <p>Compassionate, patient-centered cardiac care with cutting-edge technology</p>
+            <div class="hero-buttons">
+                <a href="#appointment" class="btn-primary">Book an Appointment</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome" id="about">
+        <div class="welcome-grid">
+            <div class="welcome-image" data-aos="fade-right" data-aos-duration="1000">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800" alt="Dr. Thorne">
+            </div>
+            <div class="welcome-content" data-aos="fade-left" data-aos-duration="1000">
+                <h2>Welcome to Excellence in Cardiac Care</h2>
+                <p>With over 15 years of experience, Dr. Alexander Thorne is a renowned cardiologist dedicated to providing compassionate, patient-centered care. He believes in a holistic approach to heart health, combining cutting-edge medical technology with personalized treatment plans.</p>
+                <p>Dr. Thorne completed his medical degree at Johns Hopkins University School of Medicine and his residency and fellowship in Cardiology at the Mayo Clinic. He is a fellow of the American College of Cardiology and regularly contributes to cardiology research.</p>
+                <a href="#services" class="btn-primary">Explore Services</a>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                <h3>15+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                <h3>5000+</h3>
+                <p>Patients Treated</p>
+            </div>
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                <h3>98%</h3>
+                <p>Satisfaction Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Our Services</h2>
+            <p>Comprehensive cardiac care tailored to your unique needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Preventive Cardiology</h3>
+                <p>Proactive heart health strategies to prevent cardiovascular disease before it starts. Comprehensive risk assessments and lifestyle guidance.</p>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-heart-pulse"></i>
+                </div>
+                <h3>Heart Disease Management</h3>
+                <p>Expert treatment for coronary artery disease, heart failure, and other cardiac conditions with personalized care plans.</p>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3>Cardiac Testing</h3>
+                <p>State-of-the-art diagnostic testing including ECG, echocardiograms, stress tests, and advanced imaging technologies.</p>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="400">
+                <div class="service-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>Consultations</h3>
+                <p>Thorough evaluations and second opinions for complex cardiac conditions with clear, understandable explanations.</p>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3> Hypertension Management</h3>
+                <p>A dedicated program to accurately diagnose, monitor, and effectively control high blood pressure through tailored medication, reducing your risk of future complications.</p>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="400">
+                <div class="service-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>Cholesterol & Lipid Disorder Clinic</h3>
+                <p>Specialized focus on diagnosing and treating complex cholesterol and triglyceride issues through advanced medication management to improve your cardiovascular health.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Why Choose Dr. Thorne?</h2>
+            <p>Experience the difference of personalized, compassionate cardiac care</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item" data-aos="fade-right" data-aos-delay="100">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="feature-content">
+                    <h4>Same-Day Appointments</h4>
+                    <p>We understand urgency matters. Get the care you need when you need it.</p>
+                </div>
+            </div>
+            <div class="feature-item" data-aos="fade-right" data-aos-delay="200">
+                <div class="feature-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <div class="feature-content">
+                    <h4>Personalized Care Plans</h4>
+                    <p>Every patient is unique. Your treatment plan should be too.</p>
+                </div>
+            </div>
+            <div class="feature-item" data-aos="fade-right" data-aos-delay="300">
+                <div class="feature-icon">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <div class="feature-content">
+                    <h4>State-of-the-Art Facility</h4>
+                    <p>Latest technology and comfortable environment for your care.</p>
+                </div>
+            </div>
+            <div class="feature-item" data-aos="fade-right" data-aos-delay="400">
+                <div class="feature-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="feature-content">
+                    <h4>Patient Education</h4>
+                    <p>We empower you with knowledge to take control of your heart health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header" data-aos="fade-up">
+            <h2>What Our Patients Say</h2>
+            <p>Real stories from real patients who've experienced exceptional care</p>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">JD</div>
+                    <div class="testimonial-info">
+                        <h4>John Davis</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"The best cardiologist I've ever had. Dr. Thorne takes the time to explain everything and truly listens to his patients. Highly recommend!"</p>
+            </div>
+            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">RJ</div>
+                    <div class="testimonial-info">
+                        <h4>Robert Johnson</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"Professional, knowledgeable, and caring. Dr. Thorne's preventive approach helped me avoid serious heart problems. His clinic is top-notch!"</p>
+            </div>
+            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">EM</div>
+                    <div class="testimonial-info">
+                        <h4>Emily Watson</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"After seeing multiple cardiologists, I finally found Dr. Thorne. His holistic approach and attention to detail are unmatched. I feel confident in my heart health now."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Get In Touch</h2>
+            <p>Have questions? We're here to help you on your journey to better heart health</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Our Location</h4>
+                        <p>123 Medical Plaza, Suite 400<br>Healthcare District<br>New York, NY 10001</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone Number</h4>
+                        <p>(555) 123-4567<br>Toll Free: (800) 555-HEART</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email Address</h4>
+                        <p>info@drthorne.com<br>appointments@drthorne.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Office Hours</h4>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic" data-aos="fade-left" data-aos-delay="100">
+            <img class="picture" src="https://plus.unsplash.com/premium_photo-1673953510107-d5aee40d80a7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGNsaW5pY3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="appointment">
+        <div class="cta-content" data-aos="fade-up">
+            <h2>Ready to Take the Next Step?</h2>
+            <p>Schedule your consultation today and start your journey to better heart health</p>
+            <a href="{% url "book_appointment" %}" class="btn-primary">Book Your Appointment Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Dr. Alexander Thorne</h3>
+                <p>Board-Certified Cardiologist</p>
+                <p>Dedicated to exceptional cardiac care and patient wellness.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Dr. Thorne</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Preventive Cardiology</a></li>
+                    <li><a href="#">Heart Disease Management</a></li>
+                    <li><a href="#">Cardiac Testing</a></li>
+                    <li><a href="#">Patient Resources</a></li>
+                    <li><a href="#">Health Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Medical Plaza, Suite 400</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@drthorne.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dr. Alexander Thorne, M.D. All rights reserved. | Privacy Policy | Terms of Use</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="{% static "booking/script.js" %}">
+    </script>
+</body>
+</html>

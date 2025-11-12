@@ -1,0 +1,523 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Velvet Table - Exquisite Fine Dining Experience</title>
+    <link rel="icon" sizes="32x32" href="{% static 'hotel/restaurant.png' %}">
+    <link rel="icon" sizes="32x32" href="{% static 'hotel/icon.png' %}" style="border-radius: 50%;">
+    <meta name="description" content="Experience culinary excellence at The Velvet Table. Award-winning 5-star fine dining restaurant offering exceptional cuisine and ambiance.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'hotel/styles.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <img src="{% static 'hotel/logo.jpg' %}" style="width: 50px; border-radius: 30px;">
+                The Velvet Table
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('menu')">Menu</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="home" class="page">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-aos="fade-up">Exquisite Fine Dining Experience</h1>
+                <p data-aos="fade-up" data-aos-delay="200">Where culinary artistry meets timeless elegance in every bite</p>
+                <a href="#" class="cta-button" data-aos="fade-up" data-aos-delay="400" onclick="showPage('contact')">
+                    Reserve Your Table <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stats-container">
+                <div class="stat-item" data-aos="fade-up">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Awards Won</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number">5★</div>
+                    <div class="stat-label">Michelin Rating</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="container">
+                <div class="about-preview">
+                    <div class="about-image" data-aos="fade-right"><img src="https://media.istockphoto.com/id/1176929739/photo/restaurant-plate-of-black-angus-beef-fillet-with-warm-potatoes-in-cheese-sauce-and-mushroom.jpg?s=612x612&w=0&k=20&c=vmz0OJanbPTYkCtR4xlGgJQj9VOLPkvddISQzyYnS64=" alt=""></div>
+                    <div class="about-content" data-aos="fade-left">
+                        <h3>Our Story of Culinary Excellence</h3>
+                        <p>Founded in 2008 by renowned chef Marco Valenti, The Velvet Table has been redefining fine dining with our innovative approach to classic cuisine. Our philosophy centers on using only the finest seasonal ingredients sourced from local artisans and farmers.</p>
+                        <p>Every dish tells a story, every plate is a canvas, and every meal is an unforgettable journey through flavors and textures that will delight your senses.</p>
+                        <a href="#" class="learn-more" onclick="showPage('about')">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-white">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Our Services</h2>
+                    <p>Experience the pinnacle of culinary excellence with our exclusive dining services</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><img src="{% static 'hotel/cutlery_5891494.png' %}" alt=""></div>
+                        <h3>Fine Dining</h3>
+                        <p>Experience our exquisite multi-course tasting menus crafted by our award-winning culinary team, featuring seasonal ingredients and innovative techniques.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><img src="{% static 'hotel/wine_13072543.png' %}" alt=""></div>
+                        <h3>Wine Pairing</h3>
+                        <p>Our expert sommeliers will guide you through our extensive wine collection, perfectly pairing each course with exceptional vintages from around the world.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><img src="{% static 'hotel/champagne-glass_6407947.png' %}" alt=""></div>
+                        <h3>Private Events</h3>
+                        <p>Host unforgettable celebrations in our elegant private dining rooms, tailored to create magical moments for your special occasions.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><img src="{% static 'hotel/food-cover_18126010.png' %}" alt=""></div>
+                        <h3>Tasting Menu</h3>
+                        <p>Embark on a multi-course journey featuring seasonal delicacies and innovative flavor combinations crafted by our executive chef.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><img src="{% static 'hotel/saxophone_3675482.png' %}" alt=""></div>
+                        <h3>Live Entertainment</h3>
+                        <p>Enjoy live classical music performances every evening, enhancing your dining experience with sophisticated ambiance.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><img src="{% static 'hotel/recipe-book_15407792.png' %}" alt=""></div>
+                        <h3>Custom Menus</h3>
+                        <p>Work directly with our culinary team to create personalized menus accommodating dietary preferences and special requests.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Guest Experiences</h2>
+                    <p>Don't just take our word for it - hear from our valued guests</p>
+                </div>
+                <div class="testimonials-slider">
+                    <div class="testimonial active">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"An absolutely phenomenal dining experience! Every dish was a masterpiece, and the service was impeccable. The wine pairing elevated the entire meal to another level. Worth every penny!"</p>
+                        <div class="testimonial-author">Sarah Johnson</div>
+                        <div class="testimonial-role">Food Critic, Gourmet Magazine</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Celebrated our anniversary here and it was magical. The attention to detail, the ambiance, and the incredible flavors made it a night we'll never forget. Thank you for the perfect evening!"</p>
+                        <div class="testimonial-author">Michael & Emily Chen</div>
+                        <div class="testimonial-role">Regular Guests</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"As a restaurateur myself, I recognize excellence when I see it. The Velvet Table sets the standard for fine dining. The creativity in their dishes and the flawless execution is simply outstanding."</p>
+                        <div class="testimonial-author">Robert Martinez</div>
+                        <div class="testimonial-role">Restaurant Owner</div>
+                    </div>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="currentSlide(0)"></div>
+                        <div class="dot" onclick="currentSlide(1)"></div>
+                        <div class="dot" onclick="currentSlide(2)"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2 data-aos="fade-up">Ready for an Unforgettable Experience?</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Book your table today and embark on a culinary journey like no other</p>
+                <a href="#" class="cta-button" data-aos="fade-up" data-aos-delay="100" onclick="showPage('contact')">
+                    Make Reservation <i class="fas fa-calendar-check"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <div id="about" class="page hidden">
+        <div class="page-hero">
+            <div class="hero-content">
+                <h1 data-aos="fade-up">Our Story</h1>
+                <p data-aos="fade-up" data-aos-delay="200">A legacy of culinary excellence and timeless elegance</p>
+            </div>
+        </div>
+
+        <section class="section section-white">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>The Velvet Table Legacy</h2>
+                </div>
+                <div class="about-preview">
+                    <div class="about-content" data-aos="fade-right">
+                        <h3>From Vision to Reality</h3>
+                        <p>Founded in 2009 by renowned chef Alexandre Rousseau, The Velvet Table was born from a simple yet powerful vision: to create a dining sanctuary where culinary artistry and refined hospitality converge.</p>
+                        <p>What began as an intimate 20-seat establishment has blossomed into a globally acclaimed destination, earning five Michelin stars and the hearts of food enthusiasts worldwide. Yet despite our growth, we've never lost sight of what matters most—creating extraordinary moments through exceptional food.</p>
+                        <p>Every dish we serve carries the weight of our commitment to excellence, the creativity of our talented team, and the stories of the artisans and farmers who supply our ingredients.</p>
+                    </div>
+                    <div class="about-image" data-aos="fade-left"><img src="https://media.istockphoto.com/id/1127746633/photo/happy-valentine-celebration-concept.jpg?s=612x612&w=0&k=20&c=nlrQPyulVZoODzYn_G-u3sqGqVcM6nUUJ1N0ZQCj_xk=" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Our Values</h2>
+                    <p>The principles that guide everything we do</p>
+                </div>
+                <div class="mission-grid">
+                    <div class="mission-card" data-aos="fade-up">
+                        <div class="mission-icon"><img src="{% static 'hotel/medal_795255.png' %}" alt=""></div>
+                        <h3>Excellence</h3>
+                        <p>We pursue perfection in every detail, from ingredient selection to presentation, ensuring an unparalleled dining experience.</p>
+                    </div>
+                    <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="mission-icon"><img src="{% static 'hotel/impact_18241437.png' %}" alt=""></div>
+                        <h3>Sustainability</h3>
+                        <p>We partner with local farms and sustainable fisheries, honoring the environment while supporting our community.</p>
+                    </div>
+                    <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="mission-icon"><img src="{% static 'hotel/light-bulb_5357153.png' %}" alt=""></div>
+                        <h3>Innovation</h3>
+                        <p>We continuously explore new techniques and flavors, pushing culinary boundaries while respecting tradition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-white">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Meet Our Team</h2>
+                    <p>The talented individuals behind every memorable meal</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member" data-aos="fade-up">
+                        <div class="team-photo"><img src="https://media.istockphoto.com/id/948502226/photo/confident-professional-chef-in-uniform-arms-crossed-and-holding-spatula-in-his-hands.jpg?s=612x612&w=0&k=20&c=KT4B2v6uGgoCYsuAxDfyBBXQl8aoRi1Qj8ytTRospX0=" alt=""></div>
+                        <h3>Alexandre Rousseau</h3>
+                        <div class="team-role">Executive Chef & Founder</div>
+                        <p class="team-bio">A culinary visionary with 25 years of experience, Alexandre has trained in Michelin-starred kitchens across Europe.</p>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-photo"><img src="https://media.istockphoto.com/id/468971842/photo/ice-cream-seller.jpg?s=612x612&w=0&k=20&c=AZ7C3luQDCnCm3DfJ93dIL_zZKPFUB_ciwzLYPhbJQo=" alt=""></div>
+                        <h3>Orlondo Martinez</h3>
+                        <div class="team-role">Head Pastry Chef</div>
+                        <p class="team-bio">Award-winning pastry artist known for creating desserts that are as visually stunning as they are delicious.</p>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-photo"><img src="https://media.istockphoto.com/id/1291734823/photo/this-one-will-be-an-award-winner.jpg?s=612x612&w=0&k=20&c=xMhbLoe9eVKyXIPAEXZfwRA6wsNAl3aCq4jROLJIAx8=" alt=""></div>
+                        <h3>Philippe Dubois</h3>
+                        <div class="team-role">Master Sommelier</div>
+                        <p class="team-bio">An expert in wine pairing with an encyclopedic knowledge of vintages from around the world.</p>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                        <div class="team-photo"><img src="https://media.istockphoto.com/id/2154643149/photo/portrait-of-adult-man-sommelier-stand-in-front-of-winery-and-smile.jpg?s=612x612&w=0&k=20&c=P76bWerDoMszEAsG2Q2XhCXkVbyyvLQfld3NqehHxSQ=" alt=""></div>
+                        <h3>Robert Williams</h3>
+                        <div class="team-role">General Manager</div>
+                        <p class="team-bio">Ensures every guest receives impeccable service with her 15 years of luxury hospitality experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container" data-aos="fade-up">
+                <h2>Join Our Story</h2>
+                <p>Be part of the next chapter in our culinary journey</p>
+                <a href="#" class="cta-button" onclick="showPage('contact')">Reserve Your Table</a>
+            </div>
+        </section>
+    </div>
+    <div id="menu" class="page hidden">
+        <div class="page-hero">
+            <div class="hero-content">
+                <h1 data-aos="fade-up">Our Menu</h1>
+                <p data-aos="fade-up" data-aos-delay="200">A symphony of flavors crafted with passion and precision</p>
+            </div>
+        </div>
+
+        <section class="section section-white">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Signature Dishes</h2>
+                    <p>Culinary masterpieces that define The Velvet Table experience</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item" data-aos="fade-up">
+                        <div class="menu-item-image"><img src="https://media.istockphoto.com/id/532267054/photo/delicious-healthy-cooked-lobster.jpg?s=612x612&w=0&k=20&c=S8TItu6Hu9pQxiUCy3XxTn56QxYBD1O413vn8nylMU0=" alt=""></div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Butter-Poached Lobster</h3>
+                                <div class="menu-price">$85</div>
+                            </div>
+                            <p>Maine lobster gently poached in herb-infused butter, served with truffle risotto, asparagus spears, and saffron foam.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu-item-image"><img src="https://media.istockphoto.com/id/1153798390/photo/hot-grilled-whole-denver-steak.jpg?s=612x612&w=0&k=20&c=NO381LsFIH36IdTYd3uEIihzucH1Sucv6OyDn8nZbbk=" alt=""></div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Wagyu Beef Tenderloin</h3>
+                                <div class="menu-price">$95</div>
+                            </div>
+                            <p>A5 Japanese Wagyu cooked to perfection, accompanied by potato gratin, seasonal vegetables, and red wine reduction.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="menu-item-image"><img src="https://media.istockphoto.com/id/537211665/photo/black-sea-bass-with-risotto-and-asparagus.jpg?s=612x612&w=0&k=20&c=gKbQjawv7eTH4rqRTroNop2tagMQlNwfyuH_WHUeWYg=" alt=""></div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Pan-Seared Sea Bass</h3>
+                                <div class="menu-price">$72</div>
+                            </div>
+                            <p>Wild-caught sea bass with crispy skin, served over lemon beurre blanc, roasted fennel, and microgreens.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-aos="fade-up">
+                        <div class="menu-item-image"><img src="https://media.istockphoto.com/id/501031148/photo/duck-legs-confit-with-potato-gratin.jpg?s=612x612&w=0&k=20&c=BcSGG36kZIX1zqniXBMkule3OxUGHtqIvC0puCPtfac=" alt=""></div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Duck Confit</h3>
+                                <div class="menu-price">$68</div>
+                            </div>
+                            <p>Slow-cooked duck leg with crackling skin, cherry gastrique, purple potato puree, and caramelized Brussels sprouts.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu-item-image"><img src="https://media.istockphoto.com/id/1164375892/photo/ravioli-from-wheat-and-borodino-rye-flour-with-cheese.jpg?s=612x612&w=0&k=20&c=smgRcK9X5x31d1ouRCeTYCVlvkFsvJO3MltxYwxhGm0=" alt=""></div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Handmade Agnolotti</h3>
+                                <div class="menu-price">$58</div>
+                            </div>
+                            <p>Delicate pasta parcels filled with ricotta and wild mushrooms, finished with sage brown butter and Parmigiano-Reggiano.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="menu-item-image"><img src="https://media.istockphoto.com/id/625358584/photo/appetizer-plate-grilled-vegetables-with-mozzarella-cheese.jpg?s=612x612&w=0&k=20&c=JVyWn-ETy3uzMhPJpeGJ_OOKQSQE2c_sbWZevZrEAdg=" alt=""></div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Heirloom Tomato Salad</h3>
+                                <div class="menu-price">$32</div>
+                            </div>
+                            <p>Colorful heirloom tomatoes with burrata, basil oil, aged balsamic, and crispy prosciutto on arugula.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+ <section class="section section-light">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Decadent Desserts</h2>
+                    <p>Sweet finales to crown your culinary journey</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item" data-aos="fade-up">
+                        <div class="menu-item-image"><img src="https://media.istockphoto.com/id/533694785/photo/cake.jpg?s=612x612&w=0&k=20&c=5nByTd8mnor4cz6LJefVJj2Eoo1Orns70yIuBdUbd5M=" alt=""></div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Chocolate Symphony</h3>
+                                <div class="menu-price">$24</div>
+                            </div>
+                            <p>A trio of chocolate textures: dark chocolate mousse, milk chocolate cremeux, and white chocolate sorbet with gold leaf.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu-item-image"><img src="https://media.istockphoto.com/id/2150312165/photo/tarte-tatin-is-a-variant-of-apple-pie-in-which-the-apples-have-been-caramelized-in-butter-and.jpg?s=612x612&w=0&k=20&c=Efz_VbWysd633Keq3VtrFq-NwdqE-mdCaGVZcvCFZBk=" alt=""></div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Tarte Tatin</h3>
+                                <div class="menu-price">$22</div>
+                            </div>
+                            <p>Classic upside-down apple tart with vanilla bean ice cream and salted caramel, served warm.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="menu-item-image"><img src="https://media.istockphoto.com/id/626455060/photo/preparing-homemade-creme-brulee-with-berries.jpg?s=612x612&w=0&k=20&c=tnYYKivRFS909FTIGd90SmStWP8WLTVa1iZlww4tAW8=" alt=""></div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Crème Brûlée</h3>
+                                <div class="menu-price">$20</div>
+                            </div>
+                            <p>Silky vanilla custard with caramelized sugar crust, fresh berries, and mint.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cta-section">
+            <div class="container" data-aos="fade-up">
+                <h2>Ready to Indulge?</h2>
+                <p>Reserve your table and experience these culinary masterpieces</p>
+                <a href="#" class="cta-button" onclick="showPage('contact')">Book Now</a>
+            </div>
+        </section>
+    </div>
+    <div id="contact" class="page hidden">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1 data-aos="fade-up">Contact Us</h1>
+                <p data-aos="fade-up" data-aos-delay="200">We'd love to hear from you</p>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info" data-aos="fade-right">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-item-content">
+                                <h4>Address</h4>
+                                <p>123 Gourmet Avenue<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-item-content">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-item-content">
+                                <h4>Email</h4>
+                                <p>reservations@velvettable.com</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                    <form method="POST" action="{% url 'page' %}" class="contact-form" data-aos="fade-left">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="username" placeholder="Enter your full name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send Message</button>
+</form>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Velvet Table</h3>
+                <p>Experience the pinnacle of fine dining where culinary artistry meets exceptional service in an atmosphere of timeless elegance.</p>
+                <div class="social-links" style="margin-top: 1.5rem;">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="#" onclick="showPage('menu')">Menu</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <ul class="footer-links">
+                    <li>Monday - Thursday: 5:00 PM - 10:00 PM</li>
+                    <li>Friday - Saturday: 5:00 PM - 11:00 PM</li>
+                    <li>Sunday: 5:00 PM - 9:00 PM</li>
+                    <li><br></li>
+                    <li>Private Events Available</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on special events and exclusive offers.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Velvet Table. All rights reserved. | Crafted with excellence</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="{% static 'hotel/main.js' %}"></script>
+</body>
+</html>
+               

@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Social Network{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="icon" sizes="32x32" href="{% static 'network/network.png' %}">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="{% static 'network/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Modern Navigation -->
+        <nav class="modern-navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <a class="navbar-logo" href="{% url 'index3' %}">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" fill="#E1624F"/>
+                            <path d="M12 10L20 16L12 22V10Z" fill="white"/>
+                        </svg>
+                        <span>Network</span>
+                    </a>
+                    
+                    <ul class="navbar-links">
+                        <li><a href="{% url 'index3' %}" class="nav-link">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                            </svg>
+                            All Posts
+                        </a></li>
+                        
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'following' %}" class="nav-link">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                </svg>
+                                Following
+                            </a></li>
+                            
+                            <li class="nav-user">
+                                <div class="user-badge">
+                                    <div class="user-avatar">{{ user.username|slice:":1"|upper }}</div>
+                                    <span class="user-name">{{ user.username }}</span>
+                                </div>
+                            </li>
+                            
+                            <li><a href="{% url 'logout3' %}" class="nav-link logout-link">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"/>
+                                </svg>
+                                Logout
+                            </a></li>
+                        {% else %}
+                            <li><a href="{% url 'login3' %}" class="btn-primary-custom">Log In</a></li>
+                            <li><a href="{% url 'register3' %}" class="btn-secondary-custom">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="main-content">
+            {% block body %}
+            {% endblock %}
+        </div>
+        
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50
+            });
+        </script>
+        <script src="{% static 'network/network.js' %}"></script>
+    </body>
+</html>

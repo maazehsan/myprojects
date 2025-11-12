@@ -1,0 +1,41 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+<div data-aos="fade-up">
+    <h2 class="page-title">Welcome Back</h2>
+</div>
+
+<div class="form-container" data-aos="fade-up" data-aos-delay="100">
+    {% if message %}
+    <div class="alert alert-danger">
+        {{ message }}
+    </div>
+    {% endif %}
+
+    <form action="{% url 'login1' %}" method="post">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input autofocus class="form-control" type="text" name="username" id="username" placeholder="Enter your username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit" style="width: 100%;">
+                🔐 Log In
+            </button>
+        </div>
+    </form>
+
+    <p style="text-align: center; margin-top: 1.5rem; color: #6b7280;">
+        Don't have an account? <a href="{% url 'register1' %}" style="color: #6366f1; font-weight: 600;">Register here</a>
+    </p>
+</div>
+
+{% endblock %}
