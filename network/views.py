@@ -117,9 +117,11 @@ def posts_api(request):
     # for post
     if not request.user.is_authenticated:
         return HttpResponseForbidden("Login required")
-    content = (request.POST.get("content") or "").strip() if request.POST else ""
+    
+    content = request.POST.get("content", "").strip()
     if not content:
         return HttpResponseBadRequest("Content required")
+    
     post = Post.objects.create(author=request.user, content=content)
     return JsonResponse(post.serialize(me=request.user), status=201)
 
