@@ -29,4 +29,5 @@ urlpatterns = [
     path("booking/", include("booking.urls")),
     path("hotel/", include("hotel.urls")),
     path("network/", include("network.urls")),
+    path("chatbot/", include("chatbot.urls")),
 ]

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'network',
     'payments',
     'reviews',
+    'chatbot',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
