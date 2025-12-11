@@ -83,7 +83,7 @@ def get_email_template(name, message):
                                         <table role="presentation" cellspacing="0" cellpadding="0" style="margin-bottom: 30px;">
                                             <tr>
                                                 <td style="background: #FFFFFF; border-radius: 8px;">
-                                                    <a href="https://maaz.dev" target="_blank" style="display: inline-block; padding: 14px 32px; font-size: 14px; font-weight: 600; color: #0D0D0D; text-decoration: none;">View Portfolio</a>
+                                                    <a href="https://maazehsan.github.io" target="_blank" style="display: inline-block; padding: 14px 32px; font-size: 14px; font-weight: 600; color: #0D0D0D; text-decoration: none;">View Portfolio</a>
                                                 </td>
                                             </tr>
                                         </table>
