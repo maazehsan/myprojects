@@ -83,7 +83,7 @@
               </div>
             </div>
             <div class="col-md-4 text-center">
-              {% if client_profile.profile_picture %}
+              {% if client_profile.profile_picture and client_profile.profile_picture.name %}
                 <img src="{{ client_profile.profile_picture.url }}" alt="Profile" 
                      class="img-thumbnail rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
               {% else %}
