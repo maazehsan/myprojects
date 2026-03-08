@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 PORTAL_URL = "https://portal.devnautics.studio"
 WEBSITE_URL = "https://devnautics.studio"
-ADMIN_EMAIL = "info@devnautics.com"
+ADMIN_EMAIL = "maazehsan2007@gmail.com"
 
 FONT_FAMILY = '"Roboto Slab", Georgia, "Times New Roman", serif'
 
