@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework.throttling import AnonRateThrottle
 from rest_framework.views import APIView
 
+from .emails import send_request_received_email
 from .models import ClientMessage, ProjectRequest
 from .serializers import (
     ClientLoginSerializer,
@@ -30,6 +31,7 @@ class ProjectRequestCreateView(generics.CreateAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
+        send_request_received_email(serializer.instance)
         return Response(
             {"message": "Project request submitted successfully.", "data": serializer.data},
             status=status.HTTP_201_CREATED,

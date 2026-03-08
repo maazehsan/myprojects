@@ -1,5 +1,10 @@
 from django.contrib import admin
 
+from .emails import (
+    send_project_completed_email,
+    send_request_rejected_email,
+    send_welcome_email,
+)
 from .models import ClientMessage, ProgressScreenshot, ProjectRequest
 
 
@@ -30,6 +35,32 @@ class ProjectRequestAdmin(admin.ModelAdmin):
     list_editable = ("status", "payment_status", "progress_percentage")
     ordering = ("-created_at",)
     inlines = [ProgressScreenshotInline, ClientMessageInline]
+
+    # ── Email on status change ────────────────────────────────────────────
+    _STATUS_EMAIL_MAP = {
+        "reviewed": send_welcome_email,
+        "completed": send_project_completed_email,
+        "rejected": send_request_rejected_email,
+    }
+
+    def save_model(self, request, obj, form, change):
+        if change and "status" in form.changed_data:
+            email_fn = self._STATUS_EMAIL_MAP.get(obj.status)
+            if email_fn:
+                email_fn(obj)
+        super().save_model(request, obj, form, change)
+
+    def save_changelist_formset(self, request, formset, *args, **kwargs):
+        """Handle emails when status is changed via list_editable."""
+        instances = formset.save(commit=False)
+        for instance in instances:
+            if instance.pk:
+                old = ProjectRequest.objects.filter(pk=instance.pk).values_list("status", flat=True).first()
+                if old and old != instance.status:
+                    email_fn = self._STATUS_EMAIL_MAP.get(instance.status)
+                    if email_fn:
+                        email_fn(instance)
+        super().save_changelist_formset(request, formset, *args, **kwargs)
 
     fieldsets = (
         ("Project Info", {
