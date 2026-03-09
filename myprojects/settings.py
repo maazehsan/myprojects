@@ -147,4 +147,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # SendGrid Email
 SENDGRID_API_KEY = config('SENDGRID_API_KEY', default='')
-DEFAULT_FROM_EMAIL = 'hello@devnautics.studio'
+DEFAULT_FROM_EMAIL = 'DevNautics <hello@devnautics.studio>'
